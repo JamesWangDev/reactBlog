@@ -1,15 +1,14 @@
-import Link from 'next/link'
-import { Container, Main, Title, Description } from '../components/sharedstyles'
+import Head from 'next/head';
 
-export default function About() {
+export default function About(): JSX.Element {
   return (
-    <Container>
-      <Main>
-        <Title>About Page</Title>
-        <Description>
-          <Link href="/">&larr; Go Back</Link>
-        </Description>
-      </Main>
-    </Container>
-  )
+    <div>
+      <Head>
+        <title>pr.</title>
+        <meta name='description' content='Paulo Ruan personal website' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      <h1>About Page</h1>
+    </div>
+  );
 }

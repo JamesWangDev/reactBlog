@@ -1,21 +1,22 @@
-import type { AppProps } from 'next/app'
-import { ThemeProvider, DefaultTheme } from 'styled-components'
-import GlobalStyle from '../components/globalstyles'
+import type { AppProps } from 'next/app';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from '../styles/globalStyles';
+import { light } from '../styles/themes/light';
+import { Roboto } from '@next/font/google';
 
-const theme: DefaultTheme = {
-  colors: {
-    primary: '#111',
-    secondary: '#0070f3',
-  },
-}
+const roboto = Roboto({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin']
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <ThemeProvider theme={theme}>
+    <div className={roboto.className}>
+      <ThemeProvider theme={light}>
         <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>
-    </>
-  )
+    </div>
+  );
 }
