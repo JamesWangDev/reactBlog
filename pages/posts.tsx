@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import * as S from '../styles/PagesStyles';
 
-export default function About(): JSX.Element {
+export default function Posts(): JSX.Element {
   return (
     <div>
       <Head>
@@ -15,7 +15,7 @@ export default function About(): JSX.Element {
       <S.Container>
         <NavBar />
         <S.Content>
-          <S.Title>About page in construction</S.Title>
+          <S.Title>Posts page in construction</S.Title>
           <S.SubTitle>
             <Link href='/'>&larr; Back to home</Link>
           </S.SubTitle>
