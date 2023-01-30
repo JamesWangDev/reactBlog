@@ -10,13 +10,25 @@ export const Container = styled.div`
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.background};
   padding: 4rem;
+
+  @media (max-width: 1200px) {
+    padding: 2rem;
+  }
+
+  @media (max-width: 992px) {
+    padding: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   align-content: center;
   padding: 0 12rem;
   margin: 4rem auto;
@@ -25,19 +37,23 @@ export const Content = styled.div`
 
   @media (max-width: 1200px) {
     width: 80%;
-    padding: 0 10rem;
+    padding: 0 8rem;
+    margin: 2rem;
   }
 
   @media (max-width: 992px) {
-    padding: 0 8rem;
+    padding: 0 4rem;
+    margin: 1rem;
   }
 
   @media (max-width: 768px) {
-    padding: 0 4rem;
+    padding: 0 2rem;
+    margin: 0.5rem;
   }
 
   @media (max-width: 600px) {
-    padding: 0 2rem;
+    padding: 0 0.5rem;
+    margin: 0.2rem;
   }
 `;
 
