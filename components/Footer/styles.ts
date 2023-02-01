@@ -7,10 +7,30 @@ export const Footer = styled.footer`
   align-content: center;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem;
-  height: 4rem;
-  width: 100vw;
   background: none;
+  bottom: 0;
+  position: relative;
+  height: 4rem;
+  width: 50%;
+  padding: 2rem;
+  margin: 0.5rem 0;
+
+  @media (max-width: 1200px) {
+    width: 80%;
+    padding: 0 1.8rem;
+  }
+
+  @media (max-width: 992px) {
+    padding: 0 1.4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 1.2rem;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 0.5rem;
+  }
 `;
 
 export const Text = styled.p`
@@ -40,7 +60,7 @@ export const Link = styled.a`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.secondary};
+    text-decoration: underline;
   }
 
   @media (max-width: 768px) {
