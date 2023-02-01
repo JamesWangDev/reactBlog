@@ -55,12 +55,13 @@ export const Text = styled.p`
 export const Link = styled.a`
   text-decoration: none;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 500;
   color: ${({ theme }) => theme.colors.font};
   transition: all 0.2s ease-in-out;
 
   &:hover {
     text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
   }
 
   @media (max-width: 768px) {
