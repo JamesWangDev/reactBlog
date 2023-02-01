@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  align-content: center;
+  justify-content: space-between;
+  align-content: space-between;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: ${({ theme }) => theme.colors.background};
   padding: 4rem;
 
@@ -16,10 +16,14 @@ export const Container = styled.div`
   }
 
   @media (max-width: 992px) {
-    padding: 1rem;
+    padding: 1.4rem;
   }
 
   @media (max-width: 768px) {
+    padding: 1.2rem;
+  }
+
+  @media (max-width: 600px) {
     padding: 0.5rem;
   }
 `;
@@ -32,8 +36,6 @@ export const Content = styled.div`
   align-content: center;
   padding: 0 12rem;
   margin: 4rem auto;
-  width: 50%;
-  height: 100%;
 
   @media (max-width: 1200px) {
     width: 80%;
