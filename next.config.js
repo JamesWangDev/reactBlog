@@ -1,13 +1,4 @@
 /** @type {import('next').NextConfig} */
-
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-  compiler: {
-    styledComponents: true
-  },
-  experimental: {
-    fontLoaders: [{ loader: '@next/font/google', options: { subsets: ['latin'] } }]
-  }
-};
-
-module.exports = nextConfig;
+}
