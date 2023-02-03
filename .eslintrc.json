@@ -33,10 +33,11 @@
         "react-hooks/exhaustive-deps": "warn",
         "react-hooks/rules-of-hooks": "error",
         "prettier/prettier": "error",
+        "@typescript-eslint/no-empty-interface": "off",
         "import-helpers/order-imports": [
             "warn",
             {
-                "newlinesBetween": "always", // new line between groups
+                "newlinesBetween": "never",
                 "groups": [
                     ["/^react/", "/^next/", "/^@types/"],
                     "/components/",
