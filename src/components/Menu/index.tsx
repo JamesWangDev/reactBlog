@@ -7,7 +7,7 @@ interface MenuProps {
 
 export function Menu({ links }: MenuProps): JSX.Element {
   return (
-    <nav className="flex flex-row justify-center items-center mx-auto">
+    <nav className="w-64 flex flex-row justify-center items-center">
       {links.map(({ name, path }) => (
         <MenuItem key={name} name={name} path={path} />
       ))}
