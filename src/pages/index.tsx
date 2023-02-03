@@ -1,6 +1,8 @@
 import Head from "next/head"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
+import { HomeContent } from "../components/HomeContent"
+import { SectionContainer } from "../components/SectionContainer"
 
 export default function Home(): JSX.Element {
   return (
@@ -10,11 +12,12 @@ export default function Home(): JSX.Element {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div>
-        <h1 className="text-white font-sans font-semibold text-lg">
-          Paulo Ruan
-        </h1>
-      </div>
+      <SectionContainer
+        title="Paulo Ruan"
+        subtitle="Full Stack Developer and Software Engineering Student"
+      >
+        <HomeContent />
+      </SectionContainer>
       <Footer />
     </div>
   )
