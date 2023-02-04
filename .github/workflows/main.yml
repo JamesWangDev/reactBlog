@@ -16,14 +16,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: yarn install
-
       - name: Cache node_modules
         uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+      - run: yarn install
 
   run_tests:
     name: Run unit tests
@@ -55,7 +53,7 @@ jobs:
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
           github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
-          vercel-args: '--prod' #Optional
-          vercel-org-id: ${{ secrets.ORG_ID}}  #Required
+          vercel-args: "--prod" #Optional
+          vercel-org-id: ${{ secrets.ORG_ID}} #Required
           vercel-project-id: ${{ secrets.PROJECT_ID}} #Required
           working-directory: ./sub-directory
