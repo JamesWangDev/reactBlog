@@ -6,12 +6,12 @@ export interface NavLink {
 export const navLinks: NavLink[] = [
   { name: "Home", path: "/" },
   {
-    name: "About",
-    path: "/about"
+    name: "Sobre",
+    path: "/sobre"
   },
   {
-    name: "Projects",
-    path: "/projects"
+    name: "Projetos",
+    path: "/projetos"
   },
   {
     name: "Blog",
