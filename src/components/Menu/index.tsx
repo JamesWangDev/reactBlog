@@ -1,5 +1,5 @@
-import { NavLink } from "../../utils/navLinks"
-import { MenuItem } from "../MenuItem"
+import { MenuItem } from "@components/MenuItem"
+import { NavLink } from "@utils/navLinks"
 
 interface MenuProps {
   links: NavLink[]
