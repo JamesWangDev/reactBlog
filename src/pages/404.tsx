@@ -1,8 +1,8 @@
 import Head from "next/head"
-import { Footer } from "@components/Footer"
-import { Header } from "@components/Header"
-import { NotFoundContent } from "@components/NotFoundContent"
-import { SectionContainer } from "@components/SectionContainer"
+import { Footer } from "../components/Footer"
+import { Header } from "../components/Header"
+import { NotFoundContent } from "../components/NotFoundContent"
+import { SectionContainer } from "../components/SectionContainer"
 
 export default function NotFound(): JSX.Element {
   return (

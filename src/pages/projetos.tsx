@@ -1,8 +1,8 @@
 import Head from "next/head"
-import { Footer } from "@components/Footer"
-import { Header } from "@components/Header"
-import { ProjectsContent } from "@components/ProjectsContent"
-import { SectionContainer } from "@components/SectionContainer"
+import { Footer } from "../components/Footer"
+import { Header } from "../components/Header"
+import { ProjectsContent } from "../components/ProjectsContent"
+import { SectionContainer } from "../components/SectionContainer"
 
 export default function Projects(): JSX.Element {
   return (

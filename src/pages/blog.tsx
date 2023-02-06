@@ -1,8 +1,8 @@
 import Head from "next/head"
-import { BlogContent } from "@components/BlogContent"
-import { Footer } from "@components/Footer"
-import { Header } from "@components/Header"
-import { SectionContainer } from "@components/SectionContainer"
+import { BlogContent } from "../components/BlogContent"
+import { Footer } from "../components/Footer"
+import { Header } from "../components/Header"
+import { SectionContainer } from "../components/SectionContainer"
 
 export default function Blog(): JSX.Element {
   return (

@@ -1,8 +1,8 @@
 import Head from "next/head"
-import { Footer } from "@components/Footer"
-import { Header } from "@components/Header"
-import { HomeContent } from "@components/HomeContent"
-import { SectionContainer } from "@components/SectionContainer"
+import { Footer } from "../components/Footer"
+import { Header } from "../components/Header"
+import { HomeContent } from "../components/HomeContent"
+import { SectionContainer } from "../components/SectionContainer"
 
 export default function Home(): JSX.Element {
   return (
