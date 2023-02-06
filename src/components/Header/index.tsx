@@ -1,6 +1,6 @@
-import { navLinks } from "../../utils/navLinks"
-import { ButtonToggleTheme } from "../ButtonToggleTheme"
-import { Menu } from "../Menu"
+import { ButtonToggleTheme } from "@components/ButtonToggleTheme"
+import { Menu } from "@components/Menu"
+import { navLinks } from "@utils/navLinks"
 
 export function Header(): JSX.Element {
   return (
