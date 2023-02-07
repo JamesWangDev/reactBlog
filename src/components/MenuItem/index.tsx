@@ -1,4 +1,5 @@
 import Link from "next/link"
+
 import { NavLink } from "../../utils/navLinks"
 
 interface MenuItemProps extends NavLink {}

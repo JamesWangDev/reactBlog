@@ -1,4 +1,5 @@
 import Head from "next/head"
+
 import { AboutContent } from "../components/AboutContent"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"

@@ -1,4 +1,5 @@
 import { NavLink } from "../../utils/navLinks"
+
 import { MenuItem } from "../MenuItem"
 
 interface MenuProps {

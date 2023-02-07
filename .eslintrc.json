@@ -33,27 +33,23 @@
         "react-hooks/exhaustive-deps": "warn",
         "react-hooks/rules-of-hooks": "error",
         "prettier/prettier": "error",
-        "@typescript-eslint/no-empty-interface": "off"
-        // "import-helpers/order-imports": [
-        //     "warn",
-        //     {
-        //         "newlinesBetween": "never",
-        //         "groups": [
-        //             ["/^react/", "/^next/", "/^@types/"],
-        //             "/components/",
-        //             "module",
-        //             "/^@shared/",
-        //             [
-        //                 "parent",
-        //                 "sibling",
-        //                 "index"
-        //             ]
-        //         ],
-        //         "alphabetize": {
-        //             "order": "asc",
-        //             "ignoreCase": true
-        //         }
-        //     }
-        // ]
+        "@typescript-eslint/no-empty-interface": "off",
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "always",
+                "groups": [
+                    ["/^react/", "/^next/", "/^@types/"],
+                    "module",
+                    "/pages/",
+                    "/components/",
+                    "/utils/"
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "ignoreCase": true
+                }
+            }
+        ]
     }
 }

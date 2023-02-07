@@ -1,4 +1,5 @@
 import Head from "next/head"
+
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
 import { NotFoundContent } from "../components/NotFoundContent"
@@ -15,7 +16,7 @@ export default function NotFound(): JSX.Element {
       <Header />
       <SectionContainer
         title="Página não encontrada"
-        subtitle="Desculpa, não foi possível encontrar a pagina acessada."
+        subtitle="Desculpa, não foi possível encontrar a página acessada."
       >
         <NotFoundContent />
       </SectionContainer>

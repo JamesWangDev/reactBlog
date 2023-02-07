@@ -1,4 +1,5 @@
 import Head from "next/head"
+
 import { BlogContent } from "../components/BlogContent"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
