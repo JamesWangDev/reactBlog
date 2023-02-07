@@ -6,9 +6,11 @@ export function AboutContent(): JSX.Element {
       <div className="h-full min-w-fit flex flex-col items-center text-center justify-center mb-4 md:flex-row">
         <Image
           src="https://avatars.githubusercontent.com/u/85769241?v=4"
-          alt="Avatar"
+          alt="Foto de Paulo Ruan"
           width={120}
           height={120}
+          blurDataURL="https://avatars.githubusercontent.com/u/85769241?v=4"
+          placeholder="blur"
           className="rounded-full mr-4 my-4"
         />
         <div className="flex flex-col items-start justify-center text-center">
