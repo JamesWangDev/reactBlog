@@ -8,11 +8,13 @@
   },
   "dependencies": {
     "next": "latest",
+    "next-sanity": "^4.1.2",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@portabletext/react": "^2.0.1",
     "@testing-library/react": "^13.4.0",
     "@types/node": "18.11.3",
     "@types/react": "18.0.21",

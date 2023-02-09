@@ -14,6 +14,12 @@ module.exports = {
         hostname: "media.giphy.com",
         port: "",
         pathname: "/media/**"
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        port: "",
+        pathname: "/images/**"
       }
     ]
   }
