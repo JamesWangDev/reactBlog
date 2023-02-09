@@ -1,5 +1,3 @@
-import { PostFormatted } from "../pages/blog"
-
 export default [
   {
     authorName: "Nome do autor",
@@ -133,4 +131,4 @@ export default [
       }
     ]
   }
-] as PostFormatted[]
+]

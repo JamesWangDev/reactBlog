@@ -1,5 +1,4 @@
 import { navLinks } from "../../utils/navLinks"
-
 import { ButtonToggleTheme } from "../ButtonToggleTheme"
 import { Menu } from "../Menu"
 
