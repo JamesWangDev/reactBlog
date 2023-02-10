@@ -1,41 +1,36 @@
-export type Post = {
-  date: string
-  slug: { current: string }
-  author: { _ref: string }
-  title: string
-  content: Content[]
-}
-
-export type Author = {
-  _id: string
-  name: string
-  image: { _type: string; asset: { _ref: string } }
-}
-
-export type Children = {
+export type BodyChildren = {
   _key: string
   _type: string
-  marks: []
+  marks: string[]
   text: string
 }
 
-export type Content = {
+export type MarkDefsChildren = {
   _key: string
   _type: string
-  children: Children[]
+  href: string
+}
+
+export type Body = {
+  _key: string
+  _type: string
+  children: BodyChildren[]
+  markDefs: MarkDefsChildren[]
+  style: string
 }
 
 export type FormattedPost = {
   authorName: string
   authorImage: string
-  body: []
+  body: Body[]
   date: string
   slug: string
   title: string
-  description: string
+  subtitle: string
   poster: string
   attribution: string
-  tags: string[]
+  categories: string[]
+  published: boolean
 }
 
 export type FormattedPosts = {
@@ -47,7 +42,7 @@ export type BlogGetStaticPropsResponse = {
 }
 
 export type BlogProps = {
-  formattedPosts: Types.FormattedPost[]
+  formattedPosts: FormattedPost[]
 }
 
 export type PostProps = {
