@@ -34,6 +34,7 @@ export type FormattedPost = {
   title: string
   description: string
   poster: string
+  attribution: string
   tags: string[]
 }
 
@@ -66,4 +67,12 @@ export type SectionContainerProps = {
   children: React.ReactNode
   title: string
   subtitle?: string
+}
+
+export type PostContainerProps = {
+  children: React.ReactNode
+}
+
+export type PageLayoutProps = {
+  children: React.ReactNode
 }
