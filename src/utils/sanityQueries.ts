@@ -10,7 +10,6 @@ export const sanityQueries = {
     "authorImage": author -> image.asset._ref,
     body,
     date,
-    timeToRead,
     published
   } | order(_createdAt desc)`,
   postBySlug: `*[_type == "post" && slug.current == $slug] {
@@ -24,7 +23,6 @@ export const sanityQueries = {
     "authorImage": author -> image.asset._ref,
     body,
     date,
-    timeToRead,
     published
   }`,
   slugs: `*[_type == "post"]{
