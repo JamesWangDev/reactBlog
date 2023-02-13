@@ -1,34 +1,37 @@
+import imageUrlBuilder from "@sanity/image-url"
+import Image from "next/image"
 import Link from "next/link"
+import Skeleton from "react-loading-skeleton"
+import "react-loading-skeleton/dist/skeleton.css"
 import { FormattedPost } from "../../../@types/global"
+import { client } from "../../lib/sanity.client"
+import { readingTime } from "../../utils/readTime"
 
 export function PostCard(props: FormattedPost): JSX.Element {
+  const builder = imageUrlBuilder(client)
   return (
-    <div className="w-full flex flex-row justify-between items-center my-4 md:py-4 py-2 border-b border-gray-600 dark:border-gray-400">
-      <div className="flex flex-col w-full">
-        <p className="w-full my-1 text-gray-600 dark:text-gray-400 font-sans font-normal text-xs">
-          {props.date}
-        </p>
-        <Link href={`/blog/${props.slug}`}>
-          <div className="flex flex-col justify-start">
-            <h3 className="w-full text-black dark:text-white font-sans my-1 font-bold text-lg md:text-xl hover:underline transition duration-300 ease-in-out">
-              {props.title}
-            </h3>
-            <p className="my-1 text-gray-600 dark:text-gray-400 font-sans font-normal md:text-base text-sm">
-              {props.subtitle}
-            </p>
-          </div>
-        </Link>
-        <div className="my-1 py-1 max-w-fit">
-          {props.categories.map((category) => (
-            <span
-              key={category}
-              className="text-xs bg-gray-200 dark:bg-gray-800 rounded-md px-2 py-1 mr-2 w-full my-1 text-gray-600 dark:text-gray-400 font-normal capitalize"
-            >
-              {category}
-            </span>
-          ))}
+    <div className="max-w-xs bg-cod-gray-100 hover:bg-white border border-cod-gray-200 rounded-t-sm shadow dark:bg-cod-gray-900 dark:hover:bg-cod-gray-800 dark:border-cod-gray-700 transition duration-300 ease-in-out">
+      <Link href={`/blog/${props.slug}`}>
+        {(
+          <Image
+            src={builder.image(props.poster).url()}
+            alt={props.attribution}
+            width={320}
+            height={200}
+            className="rounded-t-sm object-cover"
+          />
+        ) || <Skeleton height={200} width={320} />}
+
+        <div className="p-4">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {props.title || <Skeleton />}
+          </h5>
+          <p className="font-normal text-gray-700 dark:text-gray-400">
+            Tempo de leitura:&nbsp;
+            {readingTime(props.body) || <Skeleton />}
+          </p>
         </div>
-      </div>
+      </Link>
     </div>
   )
 }
