@@ -1,31 +1,32 @@
 import Image from "next/image"
+import { MdLocationOn, MdWork } from "react-icons/md"
 
 export function AboutContent(): JSX.Element {
   return (
     <div className="w-full h-full flex flex-col items-start justify-start mt-2">
-      <div className="h-full min-w-fit flex flex-col items-center text-center justify-center mb-4 md:flex-row">
+      <div className="h-full min-w-fit flex flex-col text-center justify-center items-start md:items-center mb-4 md:flex-row">
         <Image
           src="https://avatars.githubusercontent.com/u/85769241?v=4"
           alt="Foto de Paulo Ruan"
           width={120}
           height={120}
-          blurDataURL="https://avatars.githubusercontent.com/u/85769241?v=4"
-          placeholder="blur"
-          className="rounded-full mr-4 my-4"
+          className="rounded-full md:mr-4 my-4"
         />
         <div className="flex flex-col items-start justify-center text-center">
-          <h2 className="text-xl font-bold text-black dark:text-white font-sans md:text-2xl capitalize">
+          <h3 className="text-3xl font-bold text-black dark:text-white font-sans capitalize">
             Paulo Ruan
-          </h2>
-          <h3 className="text-gray-600 dark:text-gray-400 font-normal text-sm justify-center text-center md:text-base capitalize">
-            Desenvolvedor Full Stack
           </h3>
-          <p className="text-gray-600 dark:text-gray-400 font-normal text-sm justify-center text-center md:text-base capitalize">
+          <p className="text-gray-600 dark:text-gray-400 font-normal text-sm w-44 flex justify-start items-center text-center md:text-base capitalize py-1">
+            <MdWork className="mr-1" />
+            Open Source
+          </p>
+          <p className="text-gray-600 dark:text-gray-400 font-normal text-sm w-44 flex justify-start items-center text-center md:text-base capitalize py-1">
+            <MdLocationOn className="mr-1" />
             Baturité/CE - Brasil
           </p>
         </div>
       </div>
-      <p className="text-black dark:text-white font-normal text-sm flex justify-center text-start md:text-base">
+      <p className="text-black dark:text-white font-normal flex justify-center text-start">
         Bem-vindo ao meu site! Eu uso isso para mostrar alguns de meus projetos,
         testar algumas coisas e às vezes escrever sobre meu aprendizado ou sobre
         carreira no meu blog. Sou um desenvolvedor Full stack e atualmente moro
