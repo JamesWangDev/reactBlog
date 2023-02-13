@@ -2,12 +2,12 @@ import { SectionContainerProps } from "../../../@types/global"
 
 export function SectionContainer(props: SectionContainerProps): JSX.Element {
   return (
-    <section className="w-full min-h-[50vh] py-1 px-8 md:py-4 md:px-32 flex flex-col items-start justify-center gap-1">
-      <h1 className="w-full text-black dark:text-white font-sans font-bold text-2xl md:text-4xl">
+    <section className="box-border w-full min-h-[50vh] flex flex-col items-start justify-center py-1 px-2 md:py-4 md:px-32">
+      <h1 className="w-full text-black dark:text-white font-sans text-5xl font-extrabold text-left">
         {props.title}
       </h1>
       {props.subtitle && (
-        <h2 className="w-full text-gray-600 dark:text-gray-400 font-sans font-semibold text-lg md:text-xl">
+        <h2 className="w-full text-gray-600 dark:text-gray-400 font-sans text-4xl font-bold text-left">
           {props.subtitle}
         </h2>
       )}
