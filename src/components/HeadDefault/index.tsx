@@ -3,7 +3,7 @@ import Head from "next/head"
 export function HeadDefault(): JSX.Element {
   return (
     <Head>
-      <title>pauloruan.io</title>
+      <title>Paulo Ruan</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
   )
