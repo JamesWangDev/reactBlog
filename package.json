@@ -13,8 +13,8 @@
     "nprogress": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.43.1",
-    "react-loading-skeleton": "^3.1.1"
+    "react-google-recaptcha": "^2.1.0",
+    "react-hook-form": "^7.43.1"
   },
   "devDependencies": {
     "@portabletext/react": "^2.0.1",
@@ -24,6 +24,7 @@
     "@types/nprogress": "^0.2.0",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
+    "@types/react-google-recaptcha": "^2.1.5",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
     "@vitejs/plugin-react": "^3.1.0",
