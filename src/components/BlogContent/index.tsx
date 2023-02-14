@@ -17,14 +17,12 @@ export function BlogContent(): JSX.Element {
   return (
     <div className="w-full flex flex-col justify-between items-start min-h-[380px]">
       <SearchPost />
-      <ul className="w-full min-h-[208px] flex flex-col justify-around items-start">
+      {filteredPosts.length === 0 && filteredPosts.length === 0 && <NoPosts />}
+      <ul className="w-full min-h-[208px] grid grid-cols-1 md:grid-cols-3 my-2 py-2">
         {filteredPosts.length > 0 &&
           filteredPosts.map((post: FormattedPost) => (
             <PostCard key={post.slug} {...post} />
           ))}
-        {filteredPosts.length === 0 && filteredPosts.length === 0 && (
-          <NoPosts />
-        )}
       </ul>
     </div>
   )
