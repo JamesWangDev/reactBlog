@@ -17,6 +17,7 @@
     "react-hook-form": "^7.43.1"
   },
   "devDependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@portabletext/react": "^2.0.1",
     "@sanity/image-url": "^1.0.2",
     "@testing-library/react": "^13.4.0",
