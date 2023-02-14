@@ -6,6 +6,7 @@ import { RiArrowLeftUpLine } from "react-icons/ri"
 import { PostProps } from "../../../@types/global"
 import { client } from "../../lib/sanity.client"
 import { readingTime } from "../../utils/readTime"
+import { FormContact } from "../FormsContact"
 
 const components: Partial<PortableTextReactComponents> = {
   block: {
@@ -37,6 +38,11 @@ export function PostContainer(props: PostProps): JSX.Element {
   return (
     <section className="w-full min-h-[50vh] py-1 px-8 md:py-4 md:px-32 flex flex-col items-center justify-center gap-1">
       <div className="max-w-[800px] flex flex-col items-center justify-center py-1 px-4 md:py-4 md:px-16 my-1 md:my-4">
+        <div className="w-full flex flex-col my-4 justify-center items-start">
+          <h1 className="w-full text-black dark:text-white font-sans text-5xl font-extrabold text-left py-1">
+            {props.post.title}
+          </h1>
+        </div>
         <div className="w-full flex flex-col justify-center items-start my-2">
           <div className="min-w-fit flex flex-row my-2 justify-center items-center">
             <Image
@@ -60,14 +66,6 @@ export function PostContainer(props: PostProps): JSX.Element {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col my-4 justify-center items-start">
-          <h1 className="w-full text-black dark:text-white font-sans font-black text-2xl md:text-4xl">
-            {props.post.title}
-          </h1>
-          <h2 className="w-full text-gray-600 dark:text-gray-400 font-sans font-normal text-lg md:text-xl">
-            {props.post.subtitle}
-          </h2>
-        </div>
         <div className="w-full flex flex-col my-4 justify-center items-center">
           <Image
             src={builder.image(props.post.poster).url()}
@@ -80,11 +78,14 @@ export function PostContainer(props: PostProps): JSX.Element {
             {props.post.attribution}
           </p>
         </div>
-        <div className="flex flex-col my-4 py-8 justify-center items-start text-start text-black dark:text-white border-b-2">
+        <div className="flex flex-col my-4 py-8 justify-center items-start text-start text-black dark:text-white border-b border-b-gray-600 dark:border-b-gray-400 ">
           <PortableText
             value={props.post.body}
             components={components}
           ></PortableText>
+        </div>
+        <div className="flex flex-col w-full my-8 py-1 items-start text-start justify-center">
+          <FormContact />
         </div>
         <div className="flex flex-col w-full my-8 py-1 justify-center items-start text-start">
           <p className="text-black dark:text-white font-normal text-sm text-start md:text-base my-2 py-1">
