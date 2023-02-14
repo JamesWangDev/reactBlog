@@ -15,6 +15,7 @@ export function PostCard(props: FormattedPost): JSX.Element {
           alt={props.attribution}
           width={320}
           height={200}
+          priority
           className="rounded-t-sm object-cover"
         />
         <div className="p-4">
