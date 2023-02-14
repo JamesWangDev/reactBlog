@@ -69,9 +69,10 @@ export function PostContainer(props: PostProps): JSX.Element {
         <div className="w-full flex flex-col my-4 justify-center items-center">
           <Image
             src={builder.image(props.post.poster).url()}
-            alt={props.post.title}
+            alt={props.post.attribution}
             width={692}
             height={389.25}
+            priority
             className="my-2"
           />
           <p className="text-gray-600 dark:text-gray-400 font-normal text-xs justify-center text-center md:text-sm italic mb-1">
