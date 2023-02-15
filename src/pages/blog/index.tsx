@@ -40,7 +40,6 @@ export default function Blog(props: BlogProps): JSX.Element {
       <Header />
       <SectionContainer
         title="Blog"
-        // subtitle="Todos os posts"
         subtitle={
           searchValue.length > 0
             ? `Resultados para "${searchValue}"`
