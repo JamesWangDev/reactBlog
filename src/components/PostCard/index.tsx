@@ -35,7 +35,7 @@ export function PostCard(props: FormattedPost): JSX.Element {
                 key={category}
                 className="inline-block bg-gray-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 dark:bg-cod-gray-700 dark:text-gray-400"
               >
-                #{category.toLowerCase().replace(" ", "-")}
+                #{category}
               </span>
             ))}
           </div>
