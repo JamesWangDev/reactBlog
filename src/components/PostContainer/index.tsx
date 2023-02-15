@@ -42,6 +42,9 @@ export function PostContainer(props: PostProps): JSX.Element {
           <h1 className="w-full text-black dark:text-white font-sans text-5xl font-extrabold text-left py-1">
             {props.post.title}
           </h1>
+          <h3 className="w-full text-gray-600 dark:text-gray-400 font-sans text-3xl font-bold text-left py-1">
+            {props.post.subtitle}
+          </h3>
         </div>
         <div className="w-full flex flex-col justify-center items-start my-2">
           <div className="min-w-fit flex flex-row my-2 justify-center items-center">
