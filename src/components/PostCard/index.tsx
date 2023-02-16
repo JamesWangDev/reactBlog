@@ -1,23 +1,11 @@
-import imageUrlBuilder from "@sanity/image-url"
-import Image from "next/image"
 import Link from "next/link"
 import { FormattedPost } from "../../../@types/global"
-import { client } from "../../lib/sanity.client"
 import { readingTime } from "../../utils/readTime"
 
 export function PostCard(props: FormattedPost): JSX.Element {
-  const builder = imageUrlBuilder(client)
   return (
     <div className="bg-cod-gray-100 max-w-xs border border-cod-gray-200 rounded-sm overflow-hidden shadow-md dark:bg-cod-gray-900 dark:border-cod-gray-700 transition duration-300 ease-in-out hover:scale-105">
       <Link href={`/blog/${props.slug}`}>
-        <Image
-          src={builder.image(props.poster).url()}
-          alt={props.attribution}
-          width={320}
-          height={200}
-          priority
-          className="rounded-t-sm object-cover"
-        />
         <div className="p-4">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {props.title}
