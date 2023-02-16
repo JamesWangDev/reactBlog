@@ -27,8 +27,6 @@ export type FormattedPost = {
   slug: string
   title: string
   subtitle: string
-  poster: string
-  attribution: string
   categories: string[]
   published: boolean
 }
