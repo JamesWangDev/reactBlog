@@ -12,7 +12,7 @@ const components: Partial<PortableTextReactComponents> = {
   block: {
     p: ({ children }) => {
       return (
-        <p className="text-black dark:text-white font-normal text-base md:text-lg">
+        <p className="text-black dark:text-white font-normal text-base">
           {children}
         </p>
       )
@@ -24,7 +24,7 @@ const components: Partial<PortableTextReactComponents> = {
         <Link
           href={value.href}
           target="_blank"
-          className="hover:underline decoration-2 transition duration-300 ease-in-out text-black dark:text-white font-bold italic"
+          className="hover:underline decoration-2 transition duration-300 ease-in-out text-black dark:text-white font-bold"
         >
           {children}
         </Link>
