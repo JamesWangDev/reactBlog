@@ -1,8 +1,8 @@
-import { AboutContent } from "../components/AboutContent"
-import { Footer } from "../components/Footer"
-import { HeadDefault } from "../components/HeadDefault"
-import { Header } from "../components/Header"
-import { SectionContainer } from "../components/SectionContainer"
+import { AboutContent } from "@components/AboutContent"
+import { Footer } from "@components/Footer"
+import { HeadDefault } from "@components/HeadDefault"
+import { Header } from "@components/Header"
+import { SectionContainer } from "@components/SectionContainer"
 
 export default function Sobre(): JSX.Element {
   return (
