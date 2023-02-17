@@ -1,8 +1,8 @@
 /// <reference types="vitest" />
 
-import { alias } from "./src/utils/alias"
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vitest/config"
+import { alias } from "./src/utils/alias"
 
 // https://vitejs.dev/config/
 export default defineConfig({
