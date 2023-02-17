@@ -1,13 +1,13 @@
+import { Footer } from "@components/Footer"
+import { HeadDefault } from "@components/HeadDefault"
+import { Header } from "@components/Header"
+import { Loading } from "@components/Loading"
+import { PostContainer } from "@components/PostContainer"
+import { client } from "@lib/sanity.client"
+import { FormattedPost, PostProps } from "@types"
+import { convertToBrazilianDate } from "@utils/convertToBrazilianDate"
+import { sanityQueries } from "@utils/sanityQueries"
 import { useRouter } from "next/router"
-import { FormattedPost, PostProps } from "../../../@types/global"
-import { Footer } from "../../components/Footer"
-import { HeadDefault } from "../../components/HeadDefault"
-import { Header } from "../../components/Header"
-import { Loading } from "../../components/Loading"
-import { PostContainer } from "../../components/PostContainer"
-import { client } from "../../lib/sanity.client"
-import { convertToBrazilianDate } from "../../utils/convertToBrazilianDate"
-import { sanityQueries } from "../../utils/sanityQueries"
 
 export async function getStaticProps(context: any) {
   const { slug } = context.params

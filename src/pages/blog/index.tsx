@@ -1,18 +1,14 @@
+import { BlogContent } from "@components/BlogContent"
+import { Footer } from "@components/Footer"
+import { HeadDefault } from "@components/HeadDefault"
+import { Header } from "@components/Header"
+import { SectionContainer } from "@components/SectionContainer"
+import { GlobalContext } from "@contexts/GlobalContext"
+import { client } from "@lib/sanity.client"
+import { BlogGetStaticPropsResponse, BlogProps, FormattedPost } from "@types"
+import { convertToBrazilianDate } from "@utils/convertToBrazilianDate"
+import { sanityQueries } from "@utils/sanityQueries"
 import * as React from "react"
-import {
-  BlogGetStaticPropsResponse,
-  BlogProps,
-  FormattedPost
-} from "../../../@types/global"
-import { BlogContent } from "../../components/BlogContent"
-import { Footer } from "../../components/Footer"
-import { HeadDefault } from "../../components/HeadDefault"
-import { Header } from "../../components/Header"
-import { SectionContainer } from "../../components/SectionContainer"
-import { GlobalContext } from "../../contexts/GlobalContext"
-import { client } from "../../lib/sanity.client"
-import { convertToBrazilianDate } from "../../utils/convertToBrazilianDate"
-import { sanityQueries } from "../../utils/sanityQueries"
 
 export async function getStaticProps(): Promise<BlogGetStaticPropsResponse> {
   const posts = await client.fetch(sanityQueries.posts)
