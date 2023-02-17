@@ -1,8 +1,8 @@
-import { Footer } from "../components/Footer"
-import { HeadDefault } from "../components/HeadDefault"
-import { Header } from "../components/Header"
-import { ProjectsContent } from "../components/ProjectsContent"
-import { SectionContainer } from "../components/SectionContainer"
+import { Footer } from "@components/Footer"
+import { HeadDefault } from "@components/HeadDefault"
+import { Header } from "@components/Header"
+import { ProjectsContent } from "@components/ProjectsContent"
+import { SectionContainer } from "@components/SectionContainer"
 
 export default function Projetos(): JSX.Element {
   return (
