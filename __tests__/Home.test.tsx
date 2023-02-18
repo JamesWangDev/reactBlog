@@ -1,7 +1,6 @@
+import Home from "@pages/index"
 import { render, screen, within } from "@testing-library/react"
 import { describe, expect, test } from "vitest"
-
-import Home from "../src/pages/"
 
 describe("Home", (): void => {
   test("renders the home page", (): void => {
@@ -11,9 +10,7 @@ describe("Home", (): void => {
     )
     const subheading = within(
       screen.getByRole("heading", { level: 2 })
-    ).getByText(
-      "Desenvolvedor Full Stack e Estudante de Engenharia de Software"
-    )
+    ).getByText("Desenvolvedor Full Stack")
 
     expect(heading).toBeDefined()
     expect(subheading).toBeDefined()
