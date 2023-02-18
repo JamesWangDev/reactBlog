@@ -69,3 +69,24 @@ export type PostContainerProps = {
 export type PageLayoutProps = {
   children: React.ReactNode
 }
+
+export type Technology = {
+  name: string
+  description: string
+  image: string
+}
+
+export type Project = {
+  name: string
+  description: string
+  slug: string
+  repository: string
+  website: string
+  image?: string
+  gif?: string
+  technologies: Technology[]
+}
+
+export type ProjectsContainerProps = {
+  projects: Project[]
+}
