@@ -1,9 +1,9 @@
+import { NoPosts } from "@components/NoPosts"
+import { PostsList } from "@components/PostsList"
+import { SearchPost } from "@components/SearchPost"
+import { GlobalContext } from "@contexts/GlobalContext"
+import { FormattedPost } from "@types"
 import * as React from "react"
-import { FormattedPost } from "../../../@types/global"
-import { GlobalContext } from "../../contexts/GlobalContext"
-import { NoPosts } from "../NoPosts"
-import { PostCard } from "../PostCard"
-import { SearchPost } from "../SearchPost"
 
 export function BlogContent(): JSX.Element {
   const { posts, searchValue } = React.useContext(GlobalContext)
@@ -17,15 +17,8 @@ export function BlogContent(): JSX.Element {
   return (
     <div className="w-full flex flex-col justify-between items-start min-h-[280px]">
       <SearchPost />
-      {filteredPosts.length === 0 && filteredPosts.length === 0 && <NoPosts />}
-      {filteredPosts.length > 0 && (
-        <ul className="w-full min-h-[221px] grid grid-cols-1 md:grid-cols-3 my-2 py-2">
-          {filteredPosts.length > 0 &&
-            filteredPosts.map((post: FormattedPost) => (
-              <PostCard key={post.slug} {...post} />
-            ))}
-        </ul>
-      )}
+      {filteredPosts.length === 0 && <NoPosts />}
+      {filteredPosts.length > 0 && <PostsList posts={filteredPosts} />}
     </div>
   )
 }
