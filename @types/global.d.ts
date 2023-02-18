@@ -90,3 +90,7 @@ export type Project = {
 export type ProjectsContainerProps = {
   projects: Project[]
 }
+
+export type PostsListProps = {
+  posts: FormattedPost[]
+}
