@@ -1,4 +1,4 @@
-import { SectionContainerProps } from "../../../@types/global"
+import { SectionContainerProps } from "@types"
 
 export function SectionContainer(props: SectionContainerProps): JSX.Element {
   return (
