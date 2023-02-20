@@ -1,4 +1,4 @@
-import { SocialContent } from "../SocialContent"
+import { SocialContent } from "@components/SocialContent"
 
 export function Footer(): JSX.Element {
   const currentYear = new Date().getFullYear()
