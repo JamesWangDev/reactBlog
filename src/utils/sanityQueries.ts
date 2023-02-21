@@ -41,5 +41,8 @@ export const sanityQueries = {
     website,
     "image": image.asset._ref,
     "technologies": technologies[] -> name
+  }`,
+  projectSlug: `*[_type == "project"]{
+    "slug": slug.current
   }`
 }
