@@ -24,9 +24,9 @@ export async function getStaticProps(context: any) {
 }
 
 export async function getStaticPaths() {
-  const posts = await client.fetch(sanityQueries.slugs)
+  const slugs = await client.fetch(sanityQueries.postSlugs)
 
-  const paths = posts.map((post: FormattedPost) => ({
+  const paths = slugs.map((post: FormattedPost) => ({
     params: { slug: post.slug }
   }))
 
