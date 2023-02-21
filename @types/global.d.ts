@@ -70,12 +70,6 @@ export type PageLayoutProps = {
   children: React.ReactNode
 }
 
-export type Technology = {
-  name: string
-  description: string
-  image: string
-}
-
 export type Project = {
   name: string
   description: string
@@ -84,7 +78,7 @@ export type Project = {
   website: string
   image?: string
   gif?: string
-  technologies: Technology[]
+  technologies: string[]
 }
 
 export type ProjectsContainerProps = {
