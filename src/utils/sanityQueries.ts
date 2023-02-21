@@ -21,7 +21,7 @@ export const sanityQueries = {
     body,
     published
   }`,
-  postSlug: `*[_type == "post"]{
+  postSlugs: `*[_type == "post"]{
     "slug": slug.current
   }`,
   projects: `*[_type == 'project'] {
