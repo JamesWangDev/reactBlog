@@ -1,4 +1,4 @@
-import { Body } from "../../@types/global"
+import type { Body } from "@types"
 
 export function countWords(blocks: Body[]): number[][] {
   const words = blocks.map((block) => {
@@ -14,6 +14,5 @@ export function readingTime(blocks: Body[]): string {
   const wordsPerMinute = 225
   const totalWords = words.flat().reduce((acc, curr) => acc + curr)
   const readingTime = Math.ceil(totalWords / wordsPerMinute)
-  if (readingTime <= 1) return "1 minuto"
-  return `${readingTime} minutos`
+  return `${readingTime} min de leitura`
 }
