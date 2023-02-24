@@ -88,3 +88,9 @@ export type ProjectsContainerProps = {
 export type PostsListProps = {
   posts: FormattedPost[]
 }
+
+export type FormContactProps = {
+  name: string
+  email: string
+  message: string
+}
