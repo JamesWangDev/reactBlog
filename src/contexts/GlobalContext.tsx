@@ -1,18 +1,14 @@
+import type { FormattedPost } from "@types"
 import * as React from "react"
-import { FormattedPost } from "../../@types/global"
 
 interface GlobalContextProps {
   posts: FormattedPost[]
   setPosts: React.Dispatch<React.SetStateAction<FormattedPost[]>>
-  searchValue: string
-  setSearchValue: React.Dispatch<React.SetStateAction<string>>
 }
 
 const DEFAULT_VALUE = {
   posts: [],
-  setPosts: () => {},
-  searchValue: "",
-  setSearchValue: () => {}
+  setPosts: () => {}
 }
 
 export const GlobalContext =
@@ -24,16 +20,13 @@ export function GlobalProvider({
   children: React.ReactNode
 }): JSX.Element {
   const [posts, setPosts] = React.useState<FormattedPost[]>([])
-  const [searchValue, setSearchValue] = React.useState<string>("")
 
   const memoizedValue = React.useMemo(
     () => ({
       posts,
-      setPosts,
-      searchValue,
-      setSearchValue
+      setPosts
     }),
-    [posts, searchValue]
+    [posts]
   )
 
   return (
