@@ -82,6 +82,7 @@ export function FormContact(): JSX.Element {
         </p>
       </div>
       <form
+        aria-label="form"
         onSubmit={handleSubmit(handleForm)}
         className="items-start w-full justify-center flex flex-col space-y-4 mt-4"
       >
