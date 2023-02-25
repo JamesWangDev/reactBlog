@@ -35,7 +35,7 @@ export type FormattedPosts = {
   formattedPosts: FormattedPost[]
 }
 
-export type BlogGetStaticPropsResponse = {
+export type BlogGetStaticProps = {
   props: FormattedPosts
 }
 
