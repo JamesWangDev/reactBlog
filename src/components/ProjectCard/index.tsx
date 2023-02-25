@@ -23,10 +23,10 @@ export function ProjectCard(props: Project): JSX.Element {
         <div className="flex flex-row pt-4 pb-2">
           {props.technologies.map((technology) => (
             <span
-              key={technology.name}
+              key={technology}
               className="inline-block bg-gray-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 dark:bg-cod-gray-700 dark:text-gray-400"
             >
-              #{technology.name.toLowerCase().replace(" ", "-")}
+              #{technology.toLowerCase().replace(" ", "-")}
             </span>
           ))}
         </div>
