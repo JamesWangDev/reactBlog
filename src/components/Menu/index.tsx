@@ -1,5 +1,5 @@
-import { MenuProps, NavLink } from "../../../@types/global"
-import { MenuItem } from "../MenuItem"
+import { MenuItem } from "@components/MenuItem"
+import type { MenuProps, NavLink } from "@types"
 
 export function Menu(props: MenuProps): JSX.Element {
   return (
