@@ -94,3 +94,19 @@ export type FormContactProps = {
   email: string
   message: string
 }
+
+export type ProjectsGSP = {
+  props: Projects
+}
+
+export type Projects = {
+  projects: Projects[]
+}
+
+export type ProjectProps = {
+  projects: Project[]
+}
+
+export type ProjectContentProps = {
+  project: Project
+}
