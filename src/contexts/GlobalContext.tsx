@@ -1,14 +1,18 @@
-import type { FormattedPost } from "@types"
+import type { FormattedPost, Project } from "@types"
 import * as React from "react"
 
 interface GlobalContextProps {
   posts: FormattedPost[]
   setPosts: React.Dispatch<React.SetStateAction<FormattedPost[]>>
+  projects: Project[]
+  setProjects: React.Dispatch<React.SetStateAction<Project[]>>
 }
 
 const DEFAULT_VALUE = {
   posts: [],
-  setPosts: () => {}
+  setPosts: () => {},
+  projects: [],
+  setProjects: () => {}
 }
 
 export const GlobalContext =
@@ -20,13 +24,16 @@ export function GlobalProvider({
   children: React.ReactNode
 }): JSX.Element {
   const [posts, setPosts] = React.useState<FormattedPost[]>([])
+  const [projects, setProjects] = React.useState<Project[]>([])
 
   const memoizedValue = React.useMemo(
     () => ({
       posts,
-      setPosts
+      setPosts,
+      projects,
+      setProjects
     }),
-    [posts]
+    [posts, projects]
   )
 
   return (
