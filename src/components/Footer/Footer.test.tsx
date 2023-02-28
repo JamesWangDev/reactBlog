@@ -7,7 +7,7 @@ describe("Footer", (): void => {
     render(<Footer />)
     const currentYear = new Date().getFullYear()
     const footer = screen.getByRole("contentinfo")
-    const paragraph = within(footer).getByText(`Paulo Ruan • ${currentYear}`)
+    const paragraph = within(footer).getByText(`© ${currentYear} • Paulo Ruan`)
 
     expect(footer).toBeDefined()
     expect(paragraph).toBeDefined()
