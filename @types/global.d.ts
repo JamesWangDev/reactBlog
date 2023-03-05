@@ -76,9 +76,19 @@ export type Project = {
   slug: string
   repository: string
   website: string
-  image?: string
-  gif?: string
+  poster: string
+  images: ProjectImage[]
   technologies: string[]
+}
+
+export type ProjectImage = {
+  _key: string
+  _type: string
+  alt: string
+  asset: {
+    _ref: string
+    _type: string
+  }
 }
 
 export type ProjectsContainerProps = {
