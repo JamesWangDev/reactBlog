@@ -32,15 +32,18 @@ export function ProjectContent(props: ProjectContentProps): JSX.Element {
       <p className="text-black dark:text-white my-2 py-2">
         {props.project.description}
       </p>
-      {props.project.image && (
-        <Image
-          src={builder.image(props.project.image).url()}
-          alt={props.project.name}
-          width={504}
-          height={282}
-          className="rounded-2xl object-cover w-[504px] h-[282px]"
-        />
-      )}
+      <ul className="w-full h-full grid grid-cols-1 gap-4 my-4">
+        {props.project.images.map((image) => (
+          <Image
+            key={image._key}
+            src={builder.image(image.asset).url()}
+            alt={image.alt}
+            width={1200}
+            height={800}
+            className="rounded-2xl object-cover"
+          />
+        ))}
+      </ul>
     </div>
   )
 }
