@@ -19,15 +19,13 @@ export function ProjectCard(props: Project): JSX.Element {
         </p>
       </div>
       <Link href={`/projetos/${props.slug}`} target="_self">
-        {props.image && (
-          <Image
-            src={builder.image(props.image).url()}
-            alt={props.name}
-            width={504}
-            height={282}
-            className="rounded-2xl object-cover w-[504px] h-[282px]"
-          />
-        )}
+        <Image
+          src={builder.image(props.poster).url()}
+          alt={props.name}
+          width={504}
+          height={282}
+          className="rounded-2xl object-cover"
+        />
       </Link>
     </div>
   )
