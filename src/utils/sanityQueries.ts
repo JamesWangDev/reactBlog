@@ -46,5 +46,13 @@ export const sanityQueries = {
   }`,
   projectSlug: `*[_type == "project"]{
     "slug": slug.current
+  }`,
+  about: `*[_type == 'about'] {
+    title,
+    occupation,
+    location,
+    "image": image.asset._ref,
+    "alt": attribution,
+    content
   }`
 }
