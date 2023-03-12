@@ -13,11 +13,17 @@ export const SEO: DefaultSeoProps = {
     description: "Site pessoal de Paulo Ruan",
     images: [
       {
-        url: "https://pauloruan.vercel.app/images/og-image.png",
+        url: "https://pauloruan.vercel.app/public/og-image.png",
         width: 1280,
         height: 720,
         alt: "Paulo Ruan - Site pessoal de Paulo Ruan"
       }
     ]
-  }
+  },
+  additionalLinkTags: [
+    {
+      rel: "icon",
+      href: "https://pauloruan.vercel.app/public/favicon.ico"
+    }
+  ]
 };
