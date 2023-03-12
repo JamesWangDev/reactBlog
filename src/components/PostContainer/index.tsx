@@ -5,7 +5,7 @@ import { readingTime } from "@utils/readTime"
 import Link from "next/link"
 import { RiArrowLeftUpLine } from "react-icons/ri"
 
-const components: Partial<PortableTextReactComponents> = {
+export const components: Partial<PortableTextReactComponents> = {
   block: {
     p: ({ children }) => {
       return (
