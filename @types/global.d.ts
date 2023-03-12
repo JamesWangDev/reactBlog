@@ -120,3 +120,22 @@ export type ProjectProps = {
 export type ProjectContentProps = {
   project: Project
 }
+
+export type About = {
+  title: string
+  occupation: string
+  location: string
+  image: string
+  alt: string
+  content: Body[]
+}
+
+export type SobreGetStaticProps = {
+  props: {
+    about: About
+  }
+}
+
+export type SobreProps = {
+  about: About
+}
